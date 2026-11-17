@@ -1,0 +1,148 @@
+{
+  "documents": 101,
+  "runs_by_machine": [
+    {
+      "host": "0bde121bac05",
+      "books": 1
+    },
+    {
+      "host": "150e3b7e4369",
+      "books": 3
+    },
+    {
+      "host": "169.254.64.19",
+      "books": 1
+    },
+    {
+      "host": "34063761c24b",
+      "books": 101
+    },
+    {
+      "host": "ip-172-31-27-76",
+      "books": 100
+    },
+    {
+      "host": "udc-an28-7",
+      "books": 6
+    },
+    {
+      "host": "udc-an38-1",
+      "books": 20
+    },
+    {
+      "host": "udc-an38-29",
+      "books": 63
+    },
+    {
+      "host": "udc-an38-5",
+      "books": 5
+    },
+    {
+      "host": "udc-an38-9",
+      "books": 1
+    },
+    {
+      "host": "udc-an40-13",
+      "books": 6
+    },
+    {
+      "host": "\u9e3d\u9e3d\u4e0d\u6253\u74e6",
+      "books": 3
+    }
+  ],
+  "last_processed": [
+    {
+      "_id": "pg996.txt",
+      "author": "Miguel de Cervantes Saavedra",
+      "bucket": "public-yff8km",
+      "language": "English",
+      "runs": [
+        {
+          "host": "ip-172-31-27-76",
+          "at": "2026-11-02 19:56:40.521000"
+        },
+        {
+          "host": "udc-an38-9",
+          "at": "2026-11-10 17:37:29.820000",
+          "job": "22767695_101"
+        },
+        {
+          "host": "34063761c24b",
+          "at": "2026-11-17 19:21:28.766000"
+        }
+      ],
+      "title": "Don Quixote",
+      "unique_words": 15574,
+      "vocabulary_ratio": 0.0359,
+      "word_count": 433304,
+      "llm_analysis": {
+        "summary": "- Setting: Set in Spain, particularly around the 16th century.\n- Main Characters: Don Quixote, a mad knight, and Sancho Panza, his loyal squire.\n- Plot Summary: Don Quixote, inspired by medieval chivalry stories, decides to ride off as a knight and falls in love with Dulcinea, a woman he believes to be a princess. However, he encounters numerous comedic and tragic events, including battles with windmills, misunderstandings, and interactions with various characters.",
+        "genre": "historical fiction",
+        "model": "Qwen/Qwen2.5-1.5B-Instruct",
+        "at": "2026-11-10 17:37:29.820000"
+      }
+    },
+    {
+      "_id": "pg98.txt",
+      "author": "Charles Dickens",
+      "bucket": "public-yff8km",
+      "language": "English",
+      "runs": [
+        {
+          "host": "ip-172-31-27-76",
+          "at": "2026-11-02 19:56:40.213000"
+        },
+        {
+          "host": "udc-an38-29",
+          "at": "2026-11-10 17:55:41.179000",
+          "job": "22767736_94"
+        },
+        {
+          "host": "34063761c24b",
+          "at": "2026-11-17 19:21:28.290000"
+        }
+      ],
+      "title": "A Tale of Two Cities",
+      "unique_words": 9698,
+      "vocabulary_ratio": 0.07,
+      "word_count": 138490,
+      "llm_analysis": {
+        "summary": "Jerry Cruncher, a young messenger at Tellson's Bank, meets Mr. Jarvis Lorry, a lawyer, on a ferry ride. Lorry tells Jerry about a package for him, leading to a journey to Paris.",
+        "genre": "mystery",
+        "model": "Qwen/Qwen2.5-1.5B-Instruct",
+        "at": "2026-11-10 17:55:41.179000"
+      }
+    },
+    {
+      "_id": "pg963.txt",
+      "author": "Charles Dickens",
+      "bucket": "public-yff8km",
+      "language": "English",
+      "runs": [
+        {
+          "host": "ip-172-31-27-76",
+          "at": "2026-11-02 19:56:40.025000"
+        },
+        {
+          "host": "udc-an38-29",
+          "at": "2026-11-10 17:55:41.179000",
+          "job": "22767736_93"
+        },
+        {
+          "host": "34063761c24b",
+          "at": "2026-11-17 19:21:27.965000"
+        }
+      ],
+      "title": "Little Dorrit",
+      "unique_words": 14784,
+      "vocabulary_ratio": 0.0428,
+      "word_count": 345231,
+      "llm_analysis": {
+        "summary": "Mr Arthur Clennam arrives in London from Marseilles, where he meets his estranged mother and learns about her financial troubles. He decides to stay with her, despite his mother's wishes to avoid business.",
+        "genre": "historical fiction",
+        "model": "Qwen/Qwen2.5-1.5B-Instruct",
+        "at": "2026-11-10 17:55:41.179000"
+      }
+    }
+  ]
+}

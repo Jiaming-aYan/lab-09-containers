@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+**/__pycache__/
+.git/
+.env
+.env.*
+.aws/
+.docker/
+*.pem
+*.key
+results/
+*.txt
