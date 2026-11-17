@@ -8,7 +8,7 @@ Assume you want to share your image with others and make it publicly available o
 
 **Your answer:** Give two reasons why this is a bad idea. Think of who could then read your credentials, and of what happens when your Learner Lab session ends.
 
-Anyone who pulls the public image could extract the AWS credentials from its layers, even if a later layer deleted the copied files. Learner Lab credentials also expire when the session ends, so embedding them would make the image both unsafe and quickly unusable; mounting current credentials at run time avoids both problems.
+Anyone who downloads the image could find and use my AWS keys. Those Learner Lab keys also expire, so I would have to rebuild the image; mounting current keys when I run it avoids both problems.
 
 ## 2. Where did the Atlas password come from?
 
@@ -18,7 +18,7 @@ In Step 4, you ran the analysis once with `-v ~/.aws:/home/app/.aws:ro` only, wi
 
 **Your answer:** Explain, step by step, where the container found the Atlas settings in that run.
 
-Because `MONGODB_ATLAS_URL` was absent, `get_atlas_settings()` used boto3 to request the `mongodb_credentials` parameter from AWS Systems Manager Parameter Store in `us-east-1`, with decryption enabled. Boto3 read the AWS credentials from the read-only mounted `.aws` directory, then the program parsed the parameter's JSON value to obtain the Atlas URL, user, and password.
+I didn't pass the Atlas variables, so the code got them from the `mongodb_credentials` parameter in AWS SSM. It used the AWS keys in the mounted `.aws` folder to read that parameter, which held the Atlas URL, username, and password.
 
 ## 3. Same tag, different image
 
@@ -26,4 +26,4 @@ Run `docker images book-analysis`, and note the image ID of `book-analysis:0.1.0
 
 **Your answer:** Paste the image ID from before and after the rebuild. Why is it a problem for someone who uses your image that `0.1.0` now names a different image, and what should you have done instead?
 
-Before rebuild: `3cdf028a41aa`. After rebuild: `eb55896bb9ac`. I changed the description and rebuilt, but the tag was still `0.1.0`. That could confuse people because the same tag now points to a different image. I should use a new tag, such as `0.1.1`, for the changed image.
+Before: `3cdf028a41aa`. After: `eb55896bb9ac`. Changing the description made a new image, but I kept the `0.1.0` tag, so someone could get different images under the same name. I should give the changed image a new tag, like `0.1.1`.
