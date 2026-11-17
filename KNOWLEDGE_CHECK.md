@@ -7,8 +7,8 @@
 Assume you want to share your image with others and make it publicly available on `ghcr.io`, so that anyone can pull it and run the analysis. A teammate suggests adding `COPY .aws /home/app/.aws` to the `Dockerfile`, so that nobody has to type `-v ~/.aws:/home/app/.aws:ro` any more. (This is a thought experiment: keep your own package private.)
 
 **Your answer:** Give two reasons why this is a bad idea. Think of who could then read your credentials, and of what happens when your Learner Lab session ends.
+everyone who downloads the image could use my aws key, and the learner lab key also expires , so i need to rebuild the image
 
-Anyone who downloads the image could find and use my AWS keys. Those Learner Lab keys also expire, so I would have to rebuild the image; mounting current keys when I run it avoids both problems.
 
 ## 2. Where did the Atlas password come from?
 
